@@ -1,0 +1,157 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s ease;
+    color: #333;
+}
+body.dark {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: #ecf0f1;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 0.5s ease-in;
+}
+body.dark .container {
+    background: rgba(44, 62, 80, 0.9);
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+body.dark h1 {
+    color: #ecf0f1;
+}
+.toggle-mode {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.toggle-mode:hover {
+    background: #45a049;
+}
+.section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+body.dark .section {
+    background: rgba(52, 73, 94, 0.8);
+}
+.drop-area {
+    border: 2px dashed #4CAF50;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+    cursor: pointer;
+}
+.drop-area:hover, .drop-area.dragover {
+    border-color: #45a049;
+    background: rgba(76, 175, 80, 0.1);
+}
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+    display: none;
+}
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    width: 0%;
+    transition: width 0.5s ease;
+}
+.preview {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 10px;
+    border-radius: 5px;
+}
+input, button {
+    padding: 12px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #45a049;
+}
+#result, #urlResult {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.safe { color: green; }
+.danger { color: red; }
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+}
+.dashboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.stat {
+    text-align: center;
+    padding: 10px;
+    background: rgba(76, 175, 80, 0.2);
+    border-radius: 5px;
+}
+.history {
+    max-height: 200px;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+body.dark footer {
+    color: #bdc3c7;
+}
